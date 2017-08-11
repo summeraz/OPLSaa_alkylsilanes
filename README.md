@@ -17,16 +17,16 @@ These are summarized below:
 * These are the "general" parameters for perfluoroalkanes; specific dihedrals exist for 4 and 5-mers
 * The backbone dihedral specifically references opls_962 (i.e. C-CF2-C) rather than only using the "CT" class;
 if only the "CT" class were used, this would create a conflict with alkane systems if the parameters were merged.
-* To be consistent with conversions performed by OpenMM:
-- The original parameters are defined as kcal/mol, this file uses kJ/mol; a conversion factor of 4.184 was used. 
-- PI is defined as 3.141592653589 for conversion to radians.
+* To be consistent with conversions performed by OpenMM (http://openmm.org)
+    - The original parameters are defined as kcal/mol, this file uses kJ/mol; a conversion factor of 4.184 was used. 
+    - PI is defined as 3.141592653589 for conversion to radians.
 * Atom type names, e.g., opls_961, correspond to those defined in the OPLS forcefield itp file distributed with GROMACS.
-* Conversion from OPLS-style dihedrals to RB follow the formulas detailed in the GROMACS manual. Specifically,
-OPLS form:
+* Conversion from OPLS-style dihedrals to RB follow the formulas detailed in the GROMACS manual (http://gromacs.org). 
+    * Specifically, the OPLS form is given as:
 ```bash
 0.5*(F1*(1+cos(phi))+ F2*(1-cos(2phi))+ F3*(1+cos(3phi))+F4*(1-cos(4phi)))
 ```
-RB mapping:
+   * The RB mapping:
 ```bash
 c0 = F2+0.5*(F1+F3)
 c1 = 0.5*(-F1+3F3)

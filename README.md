@@ -1,26 +1,16 @@
-### OPLS-aa parameters for perfluoroalkanes
+### OPLS-aa parameters for alkylsilanes
 
 
- * Source: Watkins and Jorgensen, J. Phys. Chem. A, 105, 2001 pp 4118-4125 http://dx.doi.org/10.1021/jp004071w
+ * Source: Lorentz, Webb, Stevens, Chandross, and Grest, Tribology Letters, 19, 2005 pp 93-98 http://dx.doi.org/10.1007/s11249-005-5085-4
 
- * Forcefield file initially created 04 August 2017 by C.R. Iacovella
+ * Forcefield file initially created 14 September 2017 by A.Z. Summers
 
 #### Source Notes:
-While all parameters are listed in Watkins and Jorgensen, bond and angle parameters have various original sources, as detailed in the manuscript.  
-These are summarized below:
-* CT-F Bonds come from reference http://dx.doi.org/10.1002/jcc.540130806
-* F-CT-F angles are from reference http://dx.doi.org/10.1021/ja00124a002
-* CT-CT-F angles are the same as CT-CT-OH and CT-CT-OS from reference: http://dx.doi.org/10.1021/ja00124a002
-* Bonds and angles for the CT-CT and CT-CT-CT  are the same as for alkanes from reference, http://dx.doi.org/10.1021/ja9621760
 
 #### Additional Notes:
-* These are the "general" parameters for perfluoroalkanes; specific dihedrals exist for 4 and 5-mers
-* The backbone dihedral specifically references opls_962 (i.e. C-CF2-C) rather than only using the "CT" class;
-if only the "CT" class were used, this would create a conflict with alkane systems if the parameters were merged.
 * To be consistent with conversions performed by OpenMM (http://openmm.org)
     - The original parameters are defined as kcal/mol, this file uses kJ/mol; a conversion factor of 4.184 was used. 
     - PI is defined as 3.141592653589 for conversion to radians.
-* Atom type names, e.g., opls_961, correspond to those defined in the OPLS forcefield itp file distributed with GROMACS.
 * Conversion from OPLS-style dihedrals to RB follow the formulas detailed in the GROMACS manual (http://gromacs.org). 
     * Specifically, the OPLS form is given as:
 ```bash

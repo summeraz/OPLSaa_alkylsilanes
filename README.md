@@ -1,5 +1,6 @@
 ### OPLS-aa parameters for alkylsilanes
 
+# NOTE: This forcefield is currently under construction!
 
  * Source: Lorentz, Webb, Stevens, Chandross, and Grest, Tribology Letters, 19, 2005 pp 93-98 http://dx.doi.org/10.1007/s11249-005-5085-4
 
